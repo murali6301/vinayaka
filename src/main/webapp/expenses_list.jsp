@@ -21,14 +21,14 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: white;
+            background-color: #fff;
         }
 
         th, td {
-            border: 1px solid #999;
+            border: 1px solid #ccc;
             padding: 10px;
-            text-align: center;
             font-size: 14px;
+            text-align: center;
         }
 
         th {
@@ -47,14 +47,14 @@
 
             tr {
                 margin-bottom: 15px;
-                background-color: white;
                 border: 1px solid #ccc;
+                background-color: #fff;
                 padding: 10px;
             }
 
             td {
-                position: relative;
                 padding-left: 50%;
+                position: relative;
                 text-align: left;
                 border: none;
                 border-bottom: 1px solid #eee;
@@ -77,8 +77,8 @@
             <tr>
                 <th>S.No</th>
                 <th>Product</th>
-                <th>Total</th>
-                <th>Paid</th>
+                <th>Total Amount</th>
+                <th>Paid Amount</th>
                 <th>Date & Time</th>
             </tr>
         </thead>
@@ -107,8 +107,8 @@
             <tr>
                 <td data-label="S.No"><%= count++ %></td>
                 <td data-label="Product"><%= rs.getString("product_name") %></td>
-                <td data-label="Total"><%= rs.getBigDecimal("total_amount") %></td>
-                <td data-label="Paid"><%= rs.getBigDecimal("paid_amount") %></td>
+                <td data-label="Total Amount"><%= rs.getBigDecimal("total_amount") %></td>
+                <td data-label="Paid Amount"><%= rs.getBigDecimal("paid_amount") %></td>
                 <td data-label="Date & Time"><%= rs.getTimestamp("created_at") %></td>
             </tr>
             <%
