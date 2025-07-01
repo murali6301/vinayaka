@@ -50,7 +50,7 @@
         <a href="update_donation.jsp" class="button">Update Donation</a>
         <a href="update_expenses.jsp" class="button">Update Expenses</a>
         <a href="user_approvals.jsp" class="button">User Approvals</a>
-        <a href="remaining_amount.jsp" class="button">Remaining Amount</a>
+        <a href="remainingAmount" class="button">Remaining Amount</a>
         <a href="homepage.jsp" class="button" style="background-color: #e74c3c;">Back</a>
     </div>
 

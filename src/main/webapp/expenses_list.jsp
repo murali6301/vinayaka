@@ -8,32 +8,38 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            padding: 10px;
-            background-color: #f4f4f4;
+            padding: 20px;
+            background: linear-gradient(to bottom right, #dbeafe, #f0fdf4);
+            margin: 0;
         }
 
         h2 {
             text-align: center;
             margin-bottom: 20px;
-            color: #333;
+            color: #222;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
         th, td {
-            border: 1px solid #ccc;
             padding: 10px;
-            font-size: 14px;
             text-align: center;
+            border: 1px solid #ddd;
+            font-size: 14px;
         }
 
         th {
-            background-color: #4CAF50;
+            background-color: #22c55e;
             color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
         }
 
         @media (max-width: 600px) {
@@ -48,7 +54,6 @@
             tr {
                 margin-bottom: 15px;
                 border: 1px solid #ccc;
-                background-color: #fff;
                 padding: 10px;
             }
 
@@ -91,13 +96,11 @@
 
                 try {
                     Class.forName("org.postgresql.Driver");
-
                     String url = "jdbc:postgresql://dpg-d1elv22li9vc73a8803g-a.oregon-postgres.render.com:5432/vinayaka?sslmode=require";
                     String dbUser = "vinayaka_user";
                     String dbPassword = "HhFenu7cRf5ZdOHYN7bQxUZOTMm6DApZ";
 
                     con = DriverManager.getConnection(url, dbUser, dbPassword);
-
                     String sql = "SELECT id, product_name, total_amount, paid_amount, created_at FROM expenses ORDER BY id";
                     ps = con.prepareStatement(sql);
                     rs = ps.executeQuery();

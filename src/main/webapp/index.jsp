@@ -11,7 +11,7 @@
             text-align: center;
             padding-top: 80px;
             margin: 0;
-        }
+            }
         h1 {
             font-size: 28px;
             color: #2f2f5f;
@@ -31,6 +31,7 @@
             width: 90%;
             max-width: 300px;
             padding: 14px;
+            margin-bottom:40px;
             margin: 8px;
             border-radius: 10px;
             border: 1px solid #ccc;

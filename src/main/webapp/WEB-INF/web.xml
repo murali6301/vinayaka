@@ -4731,6 +4731,15 @@
         <extension>zmm</extension>
         <mime-type>application/vnd.handheld-entertainment+xml</mime-type>
     </mime-mapping>
+    <servlet>
+        <servlet-name>RemainingAmountServlet</servlet-name>
+        <servlet-class>com.vinaya.web.RemainingAmountServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RemainingAmountServlet</servlet-name>
+        <url-pattern>/remainingAmount</url-pattern>
+    </servlet-mapping>
 
   <!-- ==================== Default Welcome File List ===================== -->
   <!-- When a request URI refers to a directory, the default servlet looks  -->
