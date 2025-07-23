@@ -44,32 +44,31 @@
 </head>
 <body>
     <h1>Remaining Amount</h1>
-<form action="AddExpenseServlet" method="post">
+
     <div class="box">
         <h2>Donations Paid Amount</h2>
-        <p>₹ ${paid}</p>
+        <p>₹ <%= request.getAttribute("paid") %></p>
     </div>
 
     <div class="box">
         <h2>Donations Pending Amount</h2>
-        <p>₹ ${pending}</p>
+        <p>₹ <%= request.getAttribute("pending") %></p>
     </div>
 
     <div class="box">
-            <h2>Expenses Paid Amount</h2>
-            <p>₹ ${paidexpense}</p>
+        <h2>Expenses Paid Amount</h2>
+        <p>₹ <%= request.getAttribute("paidexpense") %></p>
     </div>
 
     <div class="box">
-            <h2>Expenses Pending Amount</h2>
-            <p>₹ ${pendingexpense}</p>
+        <h2>Expenses Pending Amount</h2>
+        <p>₹ <%= request.getAttribute("pendingexpense") %></p>
     </div>
 
     <div class="box">
-            <h2>Current Balance</h2>
-            <p>₹ ${pendingbal}</p>
+        <h2>Current Balance</h2>
+        <p>₹ <%= request.getAttribute("pendingbal") %></p>
     </div>
 
-    </form>
 </body>
 </html>

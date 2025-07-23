@@ -47,7 +47,7 @@
     <h2>Admin Dashboard</h2>
 
     <div class="container">
-        <a href="update_donation.jsp" class="button">Update Donation</a>
+        <a href="update_donations.jsp" class="button">Update Donation</a>
         <a href="update_expenses.jsp" class="button">Update Expenses</a>
         <a href="user_approvals.jsp" class="button">User Approvals</a>
         <a href="remainingAmount" class="button">Remaining Amount</a>

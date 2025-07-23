@@ -98,7 +98,7 @@
     </div>
 
     <!-- Title -->
-    <h1>Vinaya Donations</h1>
+    <h1>Vinayaka Donations</h1>
 
     <!-- Navigation Buttons -->
     <a href="add_donation.jsp" class="btn">Add Donation</a>
