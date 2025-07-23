@@ -66,7 +66,7 @@
 
 </head>
 <body>
-    <h1>Vinaya Donations</h1>
+    <h1>Vinayaka Donations</h1>
     <h2>Login</h2>
     <form action="LoginServlet" method="post">
         <input type="text" name="username" placeholder="Name" required /><br>
