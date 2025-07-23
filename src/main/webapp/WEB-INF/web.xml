@@ -4740,6 +4740,15 @@
         <servlet-name>RemainingAmountServlet</servlet-name>
         <url-pattern>/remainingAmount</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateExpenseServlet</servlet-name>
+        <servlet-class>com.vinaya.web.UpdateExpenseServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateExpenseServlet</servlet-name>
+        <url-pattern>/UpdateExpenseServlet</url-pattern>
+    </servlet-mapping>
 
 
   <!-- ==================== Default Welcome File List ===================== -->
