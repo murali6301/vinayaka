@@ -68,6 +68,9 @@
         <label for="fullname">Full Name</label>
         <input type="text" id="name" name="name" required>
 
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" required>
+
         <label for="amount">Amount</label>
         <input type="number" id="amount" name="amount" required>
 

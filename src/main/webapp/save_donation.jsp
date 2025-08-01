@@ -1,6 +1,7 @@
 <%@ page import="java.sql.*" %>
 <%
     String name = request.getParameter("name");
+    String phone = request.getParameter("phone");
     float amount = Float.parseFloat(request.getParameter("amount"));
     String status = request.getParameter("status");
 
@@ -15,11 +16,12 @@ String dbPassword = "HhFenu7cRf5ZdOHYN7bQxUZOTMm6DApZ";
 
         Connection con = DriverManager.getConnection(url,dbUser,dbPassword);
 
-        String sql = "INSERT into donations (name,amount,status)VALUES (?,?,?)";
+        String sql = "INSERT into donations (name,amount,status,phone)VALUES (?,?,?,?)";
         ps = con.prepareStatement(sql);
         ps.setString(1, name);
         ps.setFloat(2, amount);
         ps.setString(3, status);
+        ps.setString(4, phone);
 
         int result = ps.executeUpdate();
         con.close();
