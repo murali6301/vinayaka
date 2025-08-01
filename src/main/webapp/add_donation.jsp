@@ -71,6 +71,9 @@
         <label for="amount">Amount</label>
         <input type="number" id="amount" name="amount" required>
 
+        <label for="number">Number</label>
+        <input type="number" is="number" name="number" required>
+
         <label for="status">Status</label>
         <select id="status" name="status">
             <option value="approved">Approved</option>
