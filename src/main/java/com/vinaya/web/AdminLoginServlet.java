@@ -15,7 +15,7 @@ public class AdminLoginServlet extends HttpServlet {
 
         // ✅ Hardcoded admin credentials
         String adminUsername = "admin";
-        String adminPassword = "Murali@9405"; // change to your preferred one
+        String adminPassword = "9405"; // change to your preferred one
 
         if (username.equals(adminUsername) && password.equals(adminPassword)) {
             // Admin logged in

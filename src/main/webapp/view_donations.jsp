@@ -82,15 +82,15 @@
         Class.forName("org.postgresql.Driver");
 
 
-String url = "jdbc:postgresql://dpg-d1elv22li9vc73a8803g-a.oregon-postgres.render.com:5432/vinayaka?sslmode=require";
-String dbUser = "vinayaka_user";
-String dbPassword = "HhFenu7cRf5ZdOHYN7bQxUZOTMm6DApZ";
+String url ="jdbc:postgresql://dpg-d2cnci9r0fns73e3qbpg-a.oregon-postgres.render.com:5432/murali6301?sslmode=require";
+String dbUser = "murali6301_user";
+String dbPassword = "Fg6IBfBAIi4fESlW7djIgXK9BKlraxMh";
 
 
          Connection con = DriverManager.getConnection(url,dbUser,dbPassword);
 
 
-       String sql = ("SELECT name, amount, status, date FROM donations ORDER BY id ASC");
+       String sql = ("SELECT full_name, amount, status,created_at  FROM donations ORDER BY id ASC");
 
        ps = con.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
@@ -100,10 +100,10 @@ String dbPassword = "HhFenu7cRf5ZdOHYN7bQxUZOTMm6DApZ";
 %>
         <tr>
             <td><%= sno++ %></td>
-            <td><%= rs.getString("name") %></td>
+            <td><%= rs.getString("full_name") %></td>
             <td><%= rs.getFloat("amount") %></td>
             <td><%= rs.getString("status") %></td>
-            <td><%= rs.getTimestamp("date") %></td>
+            <td><%= rs.getTimestamp("created_at") %></td>
         </tr>
 <%
         }

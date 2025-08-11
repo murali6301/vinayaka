@@ -80,9 +80,9 @@
         Class.forName("org.postgresql.Driver");
 
 
-      String url = "jdbc:postgresql://dpg-d1elv22li9vc73a8803g-a.oregon-postgres.render.com:5432/vinayaka?sslmode=require";
-      String dbUser = "vinayaka_user";
-      String dbPassword = "HhFenu7cRf5ZdOHYN7bQxUZOTMm6DApZ";
+      String url ="jdbc:postgresql://dpg-d2cnci9r0fns73e3qbpg-a.oregon-postgres.render.com:5432/murali6301?sslmode=require";
+      String dbUser = "murali6301_user";
+      String dbPassword = "Fg6IBfBAIi4fESlW7djIgXK9BKlraxMh";
 
        Connection con = DriverManager.getConnection(url,dbUser,dbPassword);
 

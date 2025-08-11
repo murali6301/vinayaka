@@ -1,6 +1,6 @@
 <%@ page import="java.sql.*" %>
 <%
-    String name = request.getParameter("name");
+    String fullname = request.getParameter("fullname");
     float amount = Float.parseFloat(request.getParameter("amount"));
     String status = request.getParameter("status");
 
@@ -9,15 +9,15 @@
     try {
         Class.forName("org.postgresql.Driver");
 
-String url = "jdbc:postgresql://dpg-d1elv22li9vc73a8803g-a.oregon-postgres.render.com:5432/vinayaka?sslmode=require";
-String dbUser = "vinayaka_user";
-String dbPassword = "HhFenu7cRf5ZdOHYN7bQxUZOTMm6DApZ";
+String url = "jdbc:postgresql://dpg-d2cnci9r0fns73e3qbpg-a.oregon-postgres.render.com:5432/murali6301?sslmode=require";
+String dbUser = "murali6301_user";
+String dbPassword = "Fg6IBfBAIi4fESlW7djIgXK9BKlraxMh";
 
         Connection con = DriverManager.getConnection(url,dbUser,dbPassword);
 
-        String sql = "INSERT into donations (name,amount,status)VALUES (?,?,?)";
+        String sql = "INSERT into donations (full_name,amount,status)VALUES (?,?,?)";
         ps = con.prepareStatement(sql);
-        ps.setString(1, name);
+        ps.setString(1, fullname);
         ps.setFloat(2, amount);
         ps.setString(3, status);
 

@@ -84,7 +84,7 @@
                 <th>Product</th>
                 <th>Total Amount</th>
                 <th>Paid Amount</th>
-                <th>Date & Time</th>
+                <th>Pending Amount</th>
             </tr>
         </thead>
         <tbody>
@@ -96,12 +96,12 @@
 
                 try {
                     Class.forName("org.postgresql.Driver");
-                    String url = "jdbc:postgresql://dpg-d1elv22li9vc73a8803g-a.oregon-postgres.render.com:5432/vinayaka?sslmode=require";
-                    String dbUser = "vinayaka_user";
-                    String dbPassword = "HhFenu7cRf5ZdOHYN7bQxUZOTMm6DApZ";
+                    String url = "jdbc:postgresql://dpg-d2cnci9r0fns73e3qbpg-a.oregon-postgres.render.com:5432/murali6301?sslmode=require";
+                    String dbUser = "murali6301_user";
+                    String dbPassword = "Fg6IBfBAIi4fESlW7djIgXK9BKlraxMh";
 
                     con = DriverManager.getConnection(url, dbUser, dbPassword);
-                    String sql = "SELECT id, product_name, total_amount, paid_amount, created_at FROM expenses ORDER BY id";
+                    String sql = "SELECT id, product_name, total_amount, paid_amount,remaining_pending FROM expenses ORDER BY id";
                     ps = con.prepareStatement(sql);
                     rs = ps.executeQuery();
 
@@ -112,7 +112,8 @@
                 <td data-label="Product"><%= rs.getString("product_name") %></td>
                 <td data-label="Total Amount"><%= rs.getBigDecimal("total_amount") %></td>
                 <td data-label="Paid Amount"><%= rs.getBigDecimal("paid_amount") %></td>
-                <td data-label="Date & Time"><%= rs.getTimestamp("created_at") %></td>
+                <td data-label="Pending Amount"><%= rs.getBigDecimal("remaining_pending") %></td>
+
             </tr>
             <%
                     }

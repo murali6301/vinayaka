@@ -24,6 +24,19 @@
             margin-bottom: 20px;
         }
 
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            width: 90%;
+            max-width: 400px;
+            margin-bottom: 15px;
+        }
+
         form {
             width: 90%;
             max-width: 400px;
@@ -64,9 +77,16 @@
 
     <h2>Add Donation</h2>
 
+    <%
+        String success = request.getParameter("success");
+        if ("true".equals(success)) {
+    %>
+        <div class="success-message">Successfully saved donation!</div>
+    <% } %>
+
     <form action="save_donation.jsp" method="post">
         <label for="fullname">Full Name</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="fullname" name="fullname" required>
 
         <label for="amount">Amount</label>
         <input type="number" id="amount" name="amount" required>
