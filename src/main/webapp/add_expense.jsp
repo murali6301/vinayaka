@@ -13,6 +13,7 @@
 
         body {
             font-family: Arial, sans-serif;
+           background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #fbc2eb, #a6c1ee);
             background-color: #f0f2f5;
             margin: 0;
             padding: 0;
@@ -25,7 +26,7 @@
         .container {
             width: 90%;
             max-width: 400px;
-            background-color: #fff;
+
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -67,6 +68,16 @@
 
     <div class="container">
         <h2>Add Expense</h2>
+
+
+    <%
+        String message =(String)
+         request.getAttribute("message"); %>
+     <%
+         if(message != null) { %>
+         <p style ="color: green; font-size:18px; text-align:center;">
+         &#9989; <%=message %> </p>
+         <% } %>
 
         <form action="AddExpenseServlet" method="post">
             <label for="product">Product Name</label>

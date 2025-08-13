@@ -56,7 +56,8 @@ public class AddExpenseServlet extends HttpServlet {
             con.close();
 
             if (rowsInserted > 0) {
-                response.sendRedirect("add_expense.jsp");
+                request.setAttribute("message","Expenses Saved Successfully");
+                request.getRequestDispatcher("add_expense.jsp").forward(request,response);
 
             } else {
                 response.sendRedirect("error.jsp");

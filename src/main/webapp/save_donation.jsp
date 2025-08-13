@@ -25,7 +25,8 @@ String dbPassword = "Fg6IBfBAIi4fESlW7djIgXK9BKlraxMh";
         con.close();
 
         if (result > 0) {
-            out.println("Donation saved successfully!");
+            request.setAttribute("message","Donation Saved Successfully");
+            request.getRequestDispatcher("add_donation.jsp").forward(request,response);
         } else {
             out.println("Failed to save donation.");
         }

@@ -9,6 +9,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #fbc2eb, #a6c1ee);
+
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
@@ -39,6 +41,7 @@
 
         form {
             width: 90%;
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #fbc2eb, #a6c1ee);
             max-width: 400px;
             background-color: #fff;
             padding: 20px;
@@ -78,11 +81,15 @@
     <h2>Add Donation</h2>
 
     <%
-        String success = request.getParameter("success");
-        if ("true".equals(success)) {
-    %>
-        <div class="success-message">Successfully saved donation!</div>
-    <% } %>
+        String message =(String)
+         request.getAttribute("message"); %>
+     <%
+         if(message != null) { %>
+         <p style ="color: green; font-size:18px; text-align:center;">
+         &#9989; <%=message %> </p>
+         <% } %>
+
+
 
     <form action="save_donation.jsp" method="post">
         <label for="fullname">Full Name</label>

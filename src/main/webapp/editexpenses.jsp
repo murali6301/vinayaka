@@ -73,16 +73,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            padding: 15px;
-        }
+                   font-family: Arial, sans-serif;
+                    background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #fbc2eb, #a6c1ee);
+                    background-repeat : no-repeat;
+                    background-size:cover;
+                    min-height:100vh;
+                    margin:0;
+               }
         h2 {
             text-align: center;
         }
         form {
             max-width: 400px;
+             background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #fbc2eb, #a6c1ee);
             margin: auto;
-            background: #f4f4f4;
+
             padding: 15px;
             border-radius: 8px;
         }
@@ -112,8 +117,9 @@
 <h2>Edit Expense</h2>
 
 
+
 <% if (!message.isEmpty()) { %>
-    <p class="msg"><%= message %></p>
+    <p class="msg">&#9989;<%= message %></p>
 <% } %>
 
 <form method="post">

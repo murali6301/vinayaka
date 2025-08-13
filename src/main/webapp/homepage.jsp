@@ -75,7 +75,7 @@
         .btn {
             background-color: rgba(255, 255, 255, 0.85);
             border-radius: 12px;
-            padding: 15px 5px;
+            padding: 30px 5px;
             text-align: center;
             color: #004d40;
             text-decoration: none;
