@@ -1,4 +1,5 @@
 <%@ page import="java.sql.*" %>
+<%@ page import="com.vinaya.web.DBConnection" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,11 +24,7 @@
     ResultSet rs = null;
 
     try {
-        Class.forName("org.postgresql.Driver");
-        String url = "jdbc:postgresql://dpg-d2cnci9r0fns73e3qbpg-a.oregon-postgres.render.com:5432/murali6301?sslmode=require";
-        String dbUser = "murali6301_user";
-        String dbPassword = "Fg6IBfBAIi4fESlW7djIgXK9BKlraxMh";
-        con = DriverManager.getConnection(url, dbUser, dbPassword);
+        con = DBConnection.getConnection();
 
         String sql = "SELECT id, product_name, total_amount, paid_amount, remaining_pending FROM expenses ORDER BY id ASC";
         ps = con.prepareStatement(sql);

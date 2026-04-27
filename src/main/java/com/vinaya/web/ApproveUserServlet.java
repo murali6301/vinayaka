@@ -24,13 +24,7 @@ public class ApproveUserServlet extends HttpServlet {
 
             PreparedStatement ps = null;
 
-            Class.forName("org.postgresql.Driver");
-
-            String url = "jdbc:postgresql://dpg-d2cnci9r0fns73e3qbpg-a.oregon-postgres.rendor.com:5432/vinayaka?sslmode=require";
-            String dbUser = "murali6301_user";
-            String dbPassword = "Fg6IBfBAIi4fESlW7djIgXK9BKlraxMh";
-
-            Connection con = DriverManager.getConnection(url,dbUser,dbPassword);
+            Connection con = DBConnection.getConnection();
 
             String sql = ("UPDATE user_credentials SET approved = true WHERE id = ?");
             ps = con.prepareStatement(sql);

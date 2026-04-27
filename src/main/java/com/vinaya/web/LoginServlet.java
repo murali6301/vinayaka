@@ -18,16 +18,8 @@ public class LoginServlet extends HttpServlet {
 
 
         try {
+            Connection con = DBConnection.getConnection();
             PreparedStatement ps = null;
-
-            Class.forName("org.postgresql.Driver");
-
-
-            String url = "jdbc:postgresql://dpg-d1elv22li9vc73a8803g-a.oregon-postgres.render.com:5432/vinayaka?sslmode=require";
-            String dbUser = "vinayaka_user";
-            String dbPassword = "HhFenu7cRf5ZdOHYN7bQxUZOTMm6DApZ";
-
-            Connection con = DriverManager.getConnection(url,dbUser,dbPassword);
 
             String sql = ("SELECT * FROM user_credentials WHERE username = ? AND password = ?");
 

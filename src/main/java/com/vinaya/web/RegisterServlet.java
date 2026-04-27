@@ -19,27 +19,8 @@ public class RegisterServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         try {
-            // Load PostgreSQL JDBC driver
-            Class.forName("org.postgresql.Driver");
-
-            // Connect to your PostgreSQL DB (change details accordingly)
-          //  Connection conn = DriverManager.getConnection(
-            //        "jdbc:postgresql://localhost:5432/vinayaka",
-             //       "vinayaka_user",
-             //       "HhFenu7cRf5ZdOHYN7bQxUZOTMm6DApZ"
-         //   );
-
-            // Prepare the SQL insert query
-            //String sql = "INSERT INTO user_credentials (username, password, email) VALUES (?, ?, ?)";
+            Connection con = DBConnection.getConnection();
             PreparedStatement ps = null;
-
-
-
-            String url = "jdbc:postgresql://dpg-d1elv22li9vc73a8803g-a.oregon-postgres.render.com:5432/vinayaka?sslmode=require";
-            String dbUser = "vinayaka_user";
-            String dbPassword = "HhFenu7cRf5ZdOHYN7bQxUZOTMm6DApZ";
-
-            Connection con = DriverManager.getConnection(url,dbUser,dbPassword);
 
             String sql = ("INSERT INTO user_credentials (username, password, email) VALUES (?, ?, ?)");
             ps = con.prepareStatement(sql);
